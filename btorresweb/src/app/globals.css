@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.wavy {
+  --mask:
+    radial-gradient(125.01px at 165.30px 50%,#000 99%,#0000 101%) 0 calc(50% - 228px)/51% 456px repeat-y,
+    radial-gradient(125.01px at -51.3px 50%,#0000 99%,#000 101%) 114px 50%/calc(51% - 114px) 456px repeat-y,
+		radial-gradient(125.01px at calc(100% - 165.30px) 50%,#000 99%,#0000 101%) 100% 50%/51% 456px repeat-y,
+    radial-gradient(125.01px at calc(100% + 51.30px) 50%,#0000 99%,#000 101%) calc(100% - 114px) calc(50% - 228px)/calc(51% - 114px) 456px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  min-height: 100%;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

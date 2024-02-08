@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --default-font-size: 1.6rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.header-section {
+    pointer-events: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 92vw;
+    height: 100vh;
+    z-index: 10000;
+    transform: translate(-50%,-50%);
+    background: transparent;  
+    font-size: var(--default-font-size);
+}
+
+.my-canvas {
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
+    background: '#000';
+}
+
