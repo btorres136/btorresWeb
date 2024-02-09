@@ -40,3 +40,13 @@ body {
     background: '#000';
 }
 
+@media (max-width:1199.98px) { 
+    .img-fluid {
+        width: 50%;
+        height: auto;
+    }
+ }
+/*@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) {  }*/
